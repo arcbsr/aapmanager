@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "708156411528",
+    "firebase_url": "https://arcappmanager.firebaseio.com",
+    "project_id": "arcappmanager",
+    "storage_bucket": "arcappmanager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708156411528:android:0b6a6416bf7a28c7",
+        "android_client_info": {
+          "package_name": "appmanager.arcadio.com.arcappmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708156411528-u4n68vj574ndqbpgnve59ij5c5jkbob0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL-dJx9vEqimAPbJq90O2WK86qaOApWBU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
