@@ -140,7 +140,7 @@ public class ArcAppManager {
         long lastSavedDuration = System.currentTimeMillis() -
                 ArcAppManagerdb.getLongSetting(context, "arc_last_upd", 0);
         long diffInMin = TimeUnit.MILLISECONDS.toHours(lastSavedDuration);
-        ArcLog.w("Time Diff  : " + diffInMin + "");
+        ArcLog.w("Time Diff  : " + diffInMin + ", interval" + refreshIntervalHour);
         new HttpSyncAppManager(onHttpSyncNotify, (diffInMin >= refreshIntervalHour), context);
     }
 

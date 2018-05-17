@@ -6,8 +6,8 @@ android {
         applicationId "com.arcadio.appmanage"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1113
-        versionName "1.1.1.3"
+        versionCode 1114
+        versionName "1.1.1.4"
     }
     buildTypes {
         release {
