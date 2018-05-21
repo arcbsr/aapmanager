@@ -16,7 +16,7 @@ import okhttp3.RequestBody;
 
 public class HttpSyncAppManager extends AsyncTask<Void, Void, Object> {
     private onHttpSyncNotifyListener onHttpSyncNotify = null;
-    private final static String KEY_SAVED_DATA = "arc_app_manager_db";
+    protected final static String KEY_SAVED_DATA = "arc_app_manager_db";
     private final static String ARC_ROOT_URL = "http://79.143.190.131/arcappmanager/api";
     public static final String ARC_APP_DETAIL = "/app-details?pkg_name=";
     //"http://79.143.190.131/arcappmanager/api/app-details?pkg_name=";
@@ -71,7 +71,6 @@ public class HttpSyncAppManager extends AsyncTask<Void, Void, Object> {
         try {
             if (refreshData) {
                 result = getHttpResponse();
-                ArcLog.w("data load from server");
             } else {
                 ArcLog.w("data load from local||server");
                 result.result = ArcAppManagerdb.getStringValue(context, KEY_SAVED_DATA, "");
@@ -113,6 +112,7 @@ public class HttpSyncAppManager extends AsyncTask<Void, Void, Object> {
     }
 
     private resultModule getHttpResponse() {
+        ArcLog.w("data load from server");
         resultModule result = new resultModule();
         if (onHttpSyncNotify != null) {
             try {

@@ -39,6 +39,10 @@ class ShowPromotAppDialog {
         this.mPromoterNotifyListener = promoterNotifyListener;
         final int totalAds = ArcAppManager.getInstance().getApps().
                 getResponse().get(0).getPromotedAppsInfo().size();
+        if (totalAds == 0) {
+            ArcLog.w("No promoted ads.");
+            return;
+        }
         for (int i = 0; i < 10; i++) {
             int min = 0;
             int max = totalAds - 1;

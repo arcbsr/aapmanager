@@ -133,6 +133,10 @@ public class ArcAppManager {
         initiate(context, onHttpSyncNotify, refreshIntervalHour);
     }
 
+    public void clearCache(Context context) {
+        ArcAppManagerdb.removeSetting(context, HttpSyncAppManager.KEY_SAVED_DATA);
+    }
+
     public void initiate(final Context context, HttpSyncAppManager.onHttpSyncNotifyListener onHttpSyncNotify, int refreshIntervalHour) {
         if (refreshIntervalHour > 12) {
             refreshIntervalHour = 12;

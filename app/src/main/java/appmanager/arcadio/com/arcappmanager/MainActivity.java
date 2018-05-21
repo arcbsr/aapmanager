@@ -18,12 +18,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //startActivity(new Intent(this, AboutActivity.class));
+
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
                     Log.w("status", ArcAppManager.getInstance().showPromotedAds(MainActivity.this,
-                            "Sucks", null));
+                            "Install", null));
                     Log.w("status all", ArcAppManager.getInstance().getStatus());
 
 //                    Gson gson = new Gson();
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        //ArcAppManager.getInstance().clearCache(this);
         ArcAppManager.getInstance()
                 .showLog(true);
         ArcAppManager.getInstance().setExtraParam(HttpSyncAppManager.ARC_APP_DETAIL + getApplicationContext().getPackageName());
@@ -52,6 +54,6 @@ public class MainActivity extends AppCompatActivity {
             public void onDoInBackground(boolean isLoaded) {
                 Log.w("is loaded", isLoaded + "");
             }
-        }, 0);
+        }, 12);
     }
 }
