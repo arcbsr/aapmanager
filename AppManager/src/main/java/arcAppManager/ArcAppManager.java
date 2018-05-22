@@ -194,7 +194,11 @@ public class ArcAppManager {
 
     public boolean isVersionChanged(String currentVersion) {
         if (checkAppsDataValidity()) {
-            return currentVersion.equals(getVersion());
+            if (currentVersion.equals(getVersion())) {
+                return false;
+            } else {
+                return true;
+            }
         }
         return false;
     }
