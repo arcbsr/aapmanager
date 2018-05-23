@@ -131,7 +131,8 @@ class ShowPromotAppDialog {
                     public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
                         return false;
                     }
-                })
+                }).placeholder(R.drawable.loading)
+                .error(R.drawable.loading)
                 .into(appIcon);
         Glide.with(activity).load(promotedAppsInfo.appBanner).diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .listener(new RequestListener<String, GlideDrawable>() {
@@ -144,7 +145,8 @@ class ShowPromotAppDialog {
                     public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
                         return false;
                     }
-                })
+                }).placeholder(R.drawable.loading)
+                .error(R.drawable.loading)
                 .into(banner);
 
         dialog.show();

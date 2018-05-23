@@ -110,18 +110,6 @@
             android:layout_marginBottom="5dip"
             android:orientation="horizontal">
 
-            <!--<android.support.v7.widget.AppCompatButton-->
-            <!--android:id="@+id/dlg_app_close"-->
-            <!--android:layout_width="0dip"-->
-            <!--android:layout_height="50dip"-->
-            <!--android:layout_margin="5dip"-->
-            <!--android:layout_weight="1"-->
-            <!--android:text="Close"-->
-            <!--android:textColor="@android:color/white"-->
-            <!--android:textSize="16sp"-->
-            <!--android:textStyle="bold"-->
-            <!--app:backgroundTint="@android:color/holo_red_dark" />-->
-
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/dlg_app_download"
                 android:layout_width="150dip"

@@ -27,10 +27,12 @@ ext {
     buildToolsVersion = '26.0.2'
 
     // App dependencies
-    supportLibraryVersion = '27.0.2'
+    supportLibraryVersion = '27.1.1'
     constraintLibraryVersion = '1.0.2'
     retrofitVersion = '2.3.0'
     okHttp3Version = '3.9.0'
+    gson = '2.2.4'
+    glide = '3.7.0'
 }
 task clean(type: Delete) {
     delete rootProject.buildDir
