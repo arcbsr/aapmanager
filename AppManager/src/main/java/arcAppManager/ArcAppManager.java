@@ -213,7 +213,7 @@ public class ArcAppManager {
 
     public boolean isAdsDisable() {
         if (!checkAppsDataValidity()) {
-            return true;
+            return false;
         }
         return apps.getResponse().get(0).getStatusAds() == 0;
 
