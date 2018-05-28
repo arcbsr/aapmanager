@@ -82,7 +82,7 @@
             android:maxLines="5"
             android:minLines="5"
             android:padding="5dip"
-            android:text="fasdflsdkfjlskd"
+            android:text=""
             android:textColor="@android:color/black"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -132,6 +132,18 @@
                 android:layout_margin="5dip"
                 android:src="@drawable/ic_info_outline_black_24dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/dlg_app_site"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:minLines="1"
+                android:text="AD"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="10sp"
+                android:textStyle="bold" />
         </RelativeLayout>
     </RelativeLayout>
 </com.jcminarro.roundkornerlayout.RoundKornerLinearLayout>

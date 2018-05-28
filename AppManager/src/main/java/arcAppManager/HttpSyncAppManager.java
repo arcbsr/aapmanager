@@ -154,7 +154,7 @@ public class HttpSyncAppManager extends AsyncTask<Void, Void, Object> {
                 //result = new String(new MCrypt().decrypt(responsebody.body().string()));
                 result.result = responsebody.body().string();
             } catch (Exception e) {
-                e.printStackTrace();
+                ArcLog.w(e.getMessage());
             }
         }
         return result;

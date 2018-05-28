@@ -241,15 +241,4 @@ public class ArcAppManager {
     private boolean checkAppsDataValidity() {
         return (apps != null && apps.getResponse() != null && apps.getResponse().size() > 0);
     }
-//    public void initiateSplash(int refreshIntervalHour, Activity activity, int ResultReq) {
-//        long lastSavedDuration = System.currentTimeMillis() -
-//                ArcAppManagerdb.getLongSetting(activity, "refresh_time", 0);
-//        long diffInMin = TimeUnit.MILLISECONDS.toHours(lastSavedDuration);
-//        ArcLog.w("Time Diff  : " + diffInMin + ">> Splash, pkg from: " + activity.getApplicationContext().getPackageName());
-//        Intent intent = new Intent();
-//        intent.setClassName(activity, "appmanager.arcadio.com.arcappmanager.AboutActivity");
-//        intent.putExtra("refreshIntervalHour", refreshIntervalHour);
-//        intent.putExtra("pkg", activity.getApplicationContext().getPackageName());
-//        activity.startActivityForResult(intent, ResultReq);
-//    }
 }

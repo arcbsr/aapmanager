@@ -157,10 +157,11 @@ class ShowPromotAppDialog {
         try {
             context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(pkgName)));
         } catch (ActivityNotFoundException e1) {
+            ArcLog.w(e1.getMessage());
             try {
                 context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(("http://play.google.com/store/apps/details?id=" + pkgName))));
             } catch (Exception e2) {
-
+                ArcLog.w(e2.getMessage());
             }
         }
     }
@@ -171,6 +172,7 @@ class ShowPromotAppDialog {
             packageManager.getPackageInfo(packagename, 0);
             return true;
         } catch (PackageManager.NameNotFoundException e) {
+            ArcLog.w(e.getMessage());
             return false;
         }
     }
