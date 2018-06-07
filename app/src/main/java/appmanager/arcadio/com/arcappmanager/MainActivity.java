@@ -27,24 +27,29 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final PermissionUtils permissionUtils = new PermissionUtils(MainActivity.this);
-                if (!permissionUtils.isPermissionGranted(permissionUtils.checkAllPermissionsIfNot(
-                        MainActivity.this, new String[]{
-                                Manifest.permission.WRITE_EXTERNAL_STORAGE}))) {
-                    permissionUtils.AskForPermission(MainActivity.this, findViewById(R.id.button),
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                            "Need Permission", "Allow", new PermissionCallback() {
-                                @Override
-                                public void permissionGranted() {
-                                    Toast.makeText(MainActivity.this, "Permission Done", Toast.LENGTH_SHORT).show();
-                                }
-
-                                @Override
-                                public void permissionRefused() {
-                                    Toast.makeText(MainActivity.this, "Permission Refused", Toast.LENGTH_SHORT).show();
-
-                                }
-                            });
+//                final PermissionUtils permissionUtils = new PermissionUtils(MainActivity.this);
+//                if (!permissionUtils.isPermissionGranted(permissionUtils.checkAllPermissionsIfNot(
+//                        MainActivity.this, new String[]{
+//                                Manifest.permission.WRITE_EXTERNAL_STORAGE}))) {
+//                    permissionUtils.AskForPermission(MainActivity.this, findViewById(R.id.button),
+//                            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+//                            "Need Permission", "Allow", new PermissionCallback() {
+//                                @Override
+//                                public void permissionGranted() {
+//                                    Toast.makeText(MainActivity.this, "Permission Done", Toast.LENGTH_SHORT).show();
+//                                }
+//
+//                                @Override
+//                                public void permissionRefused() {
+//                                    Toast.makeText(MainActivity.this, "Permission Refused", Toast.LENGTH_SHORT).show();
+//
+//                                }
+//                            });
+//                }
+                try {
+                    ArcAppManager.getInstance().showPromotedAds(MainActivity.this, "Install", null);
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
 
             }

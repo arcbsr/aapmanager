@@ -24,16 +24,16 @@
             android:orientation="vertical"
             android:padding="3dip">
 
-            <android.support.v7.widget.AppCompatButton
+            <ImageView
                 android:id="@+id/dlg_close"
                 android:layout_width="32dip"
                 android:layout_height="32dip"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="3dip"
-                android:background="@drawable/ic_close_black_24dp"
-
-                android:padding="5dip"
+                android:background="@drawable/arc_txt_round"
+                android:padding="3dip"
+                android:src="@drawable/ic_close_black_24dp"
                 tools:ignore="VectorDrawableCompat" />
             <!--android:background="#80808080"-->
             <TextView
@@ -61,17 +61,23 @@
             android:scaleType="fitXY" />
 
 
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        <ImageView
             android:id="@+id/dlg_app_icon"
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="140dip"
-            app:civ_border_color="@android:color/white"
-            app:civ_border_width="2dp" />
+            android:layout_marginTop="140dip" />
 
-
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/dlg_app_site"
+            android:layout_width="24dip"
+            android:layout_height="24dip"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dip"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_info_outline_black_24dp"
+            android:tint="@android:color/holo_blue_dark" />
         <TextView
             android:id="@+id/dlg_app_info"
             android:layout_width="match_parent"
@@ -96,7 +102,7 @@
             android:gravity="center"
             android:maxLines="1"
             android:minLines="1"
-            android:padding="3dip"
+            android:padding="5dip"
             android:text="Promoted by...."
             android:textColor="@android:color/darker_gray"
             android:textSize="12sp"
@@ -123,26 +129,26 @@
                 android:textStyle="bold"
                 app:backgroundTint="@android:color/holo_green_dark" />
 
-            <android.support.v7.widget.AppCompatImageView
-                android:id="@+id/dlg_app_site"
-                android:layout_width="24dip"
-                android:layout_height="24dip"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_margin="5dip"
-                android:src="@drawable/ic_info_outline_black_24dp" />
+
 
             <TextView
+                android:id="@+id/ind_ads"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/dlg_app_site"
-                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/arc_txt_round"
+                android:gravity="center"
                 android:maxLines="1"
                 android:minLines="1"
-                android:text="AD"
-                android:textColor="@android:color/holo_orange_dark"
-                android:textSize="10sp"
+                android:paddingBottom="2dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:paddingTop="2dip"
+                android:text="Ad"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>
     </RelativeLayout>

@@ -79,7 +79,7 @@ class ShowPromotAppDialog {
         final TextView title = dialog.findViewById(R.id.dlg_app_title);
         final TextView description = dialog.findViewById(R.id.dlg_app_info);
         final TextView promoter = dialog.findViewById(R.id.dlg_app_owner);
-        promoter.setText("Promoted By: " + getApplicationName(activity));
+        promoter.setText("Ads By: " + activity.getString(R.string.app_name));
         final Button download = dialog.findViewById(R.id.dlg_app_download);
         if (buttonName.length() > 0)
             download.setText(buttonName);
