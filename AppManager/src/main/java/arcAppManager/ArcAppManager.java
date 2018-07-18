@@ -176,6 +176,13 @@ public class ArcAppManager {
         return "";
     }
 
+    public String getAppLink() {
+        if (checkAppsDataValidity()) {
+            return apps.getResponse().get(0).getAppLink();
+        }
+        return "";
+    }
+
     public String getAppData() {
         if (checkAppsDataValidity()) {
             return apps.getResponse().get(0).getAppData();
