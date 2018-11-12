@@ -7,8 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.10"
+        classpath 'com.android.tools.build:gradle:3.2.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -22,17 +21,19 @@ allprojects {
 ext {
     // Sdk and tools
     minSdkVersion = 16
-    targetSdkVersion = 26
-    compileSdkVersion = 26
-    buildToolsVersion = '26.0.2'
-
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.0'
+    firebasecore = '16.0.4'
+    firebaseads = '17.0.0'
     // App dependencies
-    supportLibraryVersion = '27.1.1'
+    supportLibraryVersion = '28.0.0'
     constraintLibraryVersion = '1.0.2'
     retrofitVersion = '2.3.0'
     okHttp3Version = '3.9.0'
     gson = '2.2.4'
-    glide = '3.7.0'
+    glide = '4.8.0'
+    maldex = '1.0.3'
 }
 task clean(type: Delete) {
     delete rootProject.buildDir

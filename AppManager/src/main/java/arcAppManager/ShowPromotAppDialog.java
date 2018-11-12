@@ -16,9 +16,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.Random;
 
@@ -120,31 +118,10 @@ class ShowPromotAppDialog {
         });
         title.setText(promotedAppsInfo.appName);
         description.setText(promotedAppsInfo.shortDescription);
-        Glide.with(activity).load(promotedAppsInfo.appIcon).diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                .listener(new RequestListener<String, GlideDrawable>() {
-                    @Override
-                    public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
-                        return false;
-                    }
+        Glide.with(activity).load(promotedAppsInfo.appIcon).apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
 
-                    @Override
-                    public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                        return false;
-                    }
-                })
                 .into(appIcon);
-        Glide.with(activity).load(promotedAppsInfo.appBanner).diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                .listener(new RequestListener<String, GlideDrawable>() {
-                    @Override
-                    public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
-                        return false;
-                    }
-
-                    @Override
-                    public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                        return false;
-                    }
-                })
+        Glide.with(activity).load(promotedAppsInfo.appBanner).apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
                 .into(banner);
 
         dialog.show();

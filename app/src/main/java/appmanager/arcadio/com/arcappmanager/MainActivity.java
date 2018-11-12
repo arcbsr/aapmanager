@@ -39,11 +39,7 @@ public class MainActivity extends AppCompatActivity {
 //                                }
 //                            });
 //                }
-                try {
-                    ArcAppManager.getInstance().showPromotedAds(MainActivity.this, "Install", null);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+
 
             }
         });
@@ -60,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPostConnection(Object object, boolean isSuccess) {
                 Toast.makeText(MainActivity.this, "update: " + isSuccess, Toast.LENGTH_SHORT).show();
+                try {
+                    ArcAppManager.getInstance().showPromotedAds(MainActivity.this, "Install", null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
 
             @Override
