@@ -6,8 +6,8 @@ android {
         applicationId "com.arcadio.appmanage"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
-        versionCode 211
-        versionName "2.1.1"
+        versionCode 2111
+        versionName "2.1.1.1"
         multiDexEnabled true
     }
     buildTypes {
