@@ -17,8 +17,8 @@ import okhttp3.RequestBody;
 public class HttpSyncAppManager extends AsyncTask<Void, Void, Object> {
     private onHttpSyncNotifyListener onHttpSyncNotify = null;
     protected final static String KEY_SAVED_DATA = "arc_app_manager_db";
-    private final static String ARC_ROOT_URL = "http://thearcadiosys.com/arcappmanager/api";
-    public static final String ARC_APP_DETAIL = "/app-details?pkg_name=";
+    private final static String ARC_ROOT_URL = "http://arcadiodevs.com";
+    public static final String ARC_APP_DETAIL = "/controller/base/";
     //"http://79.143.190.131/arcappmanager/api/app-details?pkg_name=";
     private boolean refreshData = true;//"http://79.143.190.131/arcappmanager/api/register-device";//
     private Context context = null;
