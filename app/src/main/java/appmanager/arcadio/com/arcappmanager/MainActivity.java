@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         //ArcAppManager.getInstance().clearCache(this);
         ArcAppManager.getInstance()
                 .showLog(true);
-        ArcAppManager.getInstance().setExtraParam(HttpSyncAppManager.ARC_APP_DETAIL + "com.cynomusic.mp3downloader");
+        ArcAppManager.getInstance().setExtraParam("https://arcadioapps.nyc3.digitaloceanspaces.com/com.cynomusic.mp3downloader.json");
         ArcAppManager.getInstance().initiate(this, new HttpSyncAppManager.onHttpSyncNotifyListener() {
             @Override
             public void onPreConnection() {
